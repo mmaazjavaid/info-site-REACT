@@ -1,20 +1,16 @@
-import React from 'react';
+import React from "react"
 
-const Main = () => {
+export default function Main(props) {
     return (
-        <div className='main-container'>
-            <div className='main-data'>
-                <h1 className='main-heading'>Fun facts about React</h1>
-                <ul className='points'>
-                    <li>Was first released in 2013</li>
-                    <li>Was originally created by jordan walkey</li>
-                    <li>Has well over 100K stars on github</li>
-                    <li>Is maintained by Facebook</li>
-                    <li>Power thousand on enterprise apps including mobile apps</li>
-                </ul>
-            </div>
-        </div>
-    );
-};
-
-export default Main;
+        <main className={props.darkMode ? "dark" : ""}>
+            <h1 className="main--title">Fun facts about React</h1>
+            <ul className="main--facts">
+                <li>Was first released in 2013</li>
+                <li>Was originally created by Jordan Walke</li>
+                <li>Has well over 100K stars on GitHub</li>
+                <li>Is maintained by Facebook</li>
+                <li>Powers thousands of enterprise apps, including mobile apps</li>
+            </ul>
+        </main>
+    )
+}
